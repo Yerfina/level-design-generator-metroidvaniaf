@@ -2,6 +2,11 @@
 A level design generator for Dungeon/Metroidvania/Puzzle
 
 
+IMPORTANT NOTE : you will need the Godot editor to run this software. It can be downloaded for free on https://godotengine.org/
+The editor is too big to fit on Github, so this is the only solution.
+Simply put the Godot editor in the same directory as the project.godot file, and this SHOULD work... Please tell me if it doesn't '^^
+
+
 **1) Introduction**
 Ce générateur a pour but de créer des diagrammes de level-design qui peuvent servir pour designer des donjons, des metroidvanias, ou des énigmes.
 
