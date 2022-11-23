@@ -1,0 +1,188 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GenerateurDiagramme.gd" type="Script" id=1]
+[ext_resource path="res://Noeuds/Fin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Noeuds/Start.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Noeuds/Verrou.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Noeuds/Clef.tscn" type="PackedScene" id=5]
+[ext_resource path="res://DessinerLignes.gd" type="Script" id=6]
+
+[node name="GenerateurDiagrame" type="Node2D"]
+script = ExtResource( 1 )
+taux_etalement = 0.01
+nombre_multiclefs = 1
+nombre_permaclefs = 1
+max_multiclefs = 1
+verrou_scene = ExtResource( 4 )
+clef_scene = ExtResource( 5 )
+start_scene = ExtResource( 3 )
+fin_scene = ExtResource( 2 )
+
+[node name="DessinerLignes" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="EcranAccueil" type="Control" parent="."]
+margin_left = 66.7462
+margin_top = 2.11893
+margin_right = 106.746
+margin_bottom = 42.1189
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BoutonGenerer" type="Button" parent="EcranAccueil"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 342.162
+margin_top = 437.169
+margin_right = 482.162
+margin_bottom = 479.169
+text = "Générer diagramme"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaisieClefsUniques" type="LineEdit" parent="EcranAccueil"]
+margin_left = 138.0
+margin_top = 83.0
+margin_right = 196.0
+margin_bottom = 107.0
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="EcranAccueil/SaisieClefsUniques"]
+margin_left = -165.276
+margin_top = 3.17839
+margin_right = -71.2763
+margin_bottom = 17.1784
+text = "Clés uniques : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaisieClefsMultiples" type="LineEdit" parent="EcranAccueil"]
+margin_left = 136.941
+margin_top = 131.735
+margin_right = 194.941
+margin_bottom = 155.735
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="EcranAccueil/SaisieClefsMultiples"]
+margin_left = -163.157
+margin_top = 4.23785
+margin_right = -55.1574
+margin_bottom = 18.2379
+text = "Clés multiples  : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaisieClefsPermanentes" type="LineEdit" parent="EcranAccueil"]
+margin_left = 132.703
+margin_top = 178.352
+margin_right = 190.703
+margin_bottom = 202.352
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="EcranAccueil/SaisieClefsPermanentes"]
+margin_left = -159.979
+margin_top = 4.23782
+margin_right = -27.979
+margin_bottom = 18.2378
+text = "Clés permanentes  : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaisieTauxEtalement" type="LineEdit" parent="EcranAccueil"]
+margin_left = 131.643
+margin_top = 232.384
+margin_right = 189.643
+margin_bottom = 256.384
+text = "0.01"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="EcranAccueil/SaisieTauxEtalement"]
+margin_left = -159.979
+margin_top = 4.23782
+margin_right = -27.979
+margin_bottom = 18.2378
+text = "Taux d'étalement  : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaisieVerrousPermaclefs" type="LineEdit" parent="EcranAccueil"]
+margin_left = 390.152
+margin_top = 179.411
+margin_right = 448.152
+margin_bottom = 203.411
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="EcranAccueil/SaisieVerrousPermaclefs"]
+margin_left = -139.849
+margin_top = -4.23788
+margin_right = 20.1508
+margin_bottom = 26.7621
+text = "Max verrous pour
+clés permanentes : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaisieVerrousMulticlefs" type="LineEdit" parent="EcranAccueil"]
+margin_left = 390.152
+margin_top = 130.676
+margin_right = 448.152
+margin_bottom = 154.676
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="EcranAccueil/SaisieVerrousMulticlefs"]
+margin_left = -136.671
+margin_top = -4.23788
+margin_right = 23.3292
+margin_bottom = 26.7621
+text = "Max verrous pour
+clés multiples : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaisieMaxMulticlefs" type="LineEdit" parent="EcranAccueil"]
+margin_left = 627.472
+margin_top = 130.676
+margin_right = 685.472
+margin_bottom = 154.676
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="EcranAccueil/SaisieMaxMulticlefs"]
+margin_left = -139.584
+margin_top = 4.47571
+margin_right = -10.5837
+margin_bottom = 18.4757
+text = "Max clés multiples :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="EcranAccueil/BoutonGenerer" to="." method="_on_BoutonGenerer_pressed"]
